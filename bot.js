@@ -47,6 +47,11 @@ bot.on("message", async message => {
         message.channel.send(target.displayAvatarURL);
     }
 
+    if(command === `${prefix}owl`) {
+        message.channel.send("https://www.twitch.tv/overwatchleague");
+    }
+
+    
     if(command === `${prefix}roll`) {
         var roll = Math.floor(Math.random() * 6) + 1;
         message.channel.send("You rolled a " + roll);
