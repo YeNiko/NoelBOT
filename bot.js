@@ -45,7 +45,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    let command = message.content.split(" ")[0].slice(prefix.length).toLowerCase()
+    let command = message.content.split(" ")[0].slice(prefix.length).toLowerCase();
     let args = message.content.split(" ").slice(1);
 
     if(!command.startsWith(prefix)) return;
@@ -103,17 +103,6 @@ bot.on("message", async message => {
     if(command === `${prefix}ping`) {
         message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
     }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    let messageArray = message.content.split(" ");
-    let command = messageArray[0];
-    let args = messageArray.slice[1];
-
-    if(!command.startsWith(prefix)) return;
 
     if(command === `${prefix}ban`) {
         if (!message.member.permissions.has('ADMINISTRATOR')) return message.reply("Sorry, you don't have permissions to use this command.");
