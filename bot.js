@@ -60,6 +60,12 @@ bot.on("message", async message => {
         message.channel.send("https://www.twitch.tv/overwatchleague");
     }
 
+    if(command === `${prefix}add`) {
+        let numArray = args.map(n=> parseInt(n));
+        let total = numArray.reduce( (p, c) => p+c);
+        
+        message.channel.sendMessage(total));
+    }
     
     if(command === `${prefix}roll`) {
         var roll = Math.floor(Math.random() * 6) + 1;
