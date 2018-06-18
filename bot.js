@@ -3,6 +3,14 @@ const prefix = "miku.";
 
 var bot = new Discord.Client();
 
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('449015012347084802').send('**' + member.user.username + '**, has joined Kyoto Café.'); 
+});
+
+bot.on('guildMemberRemove', member => {
+    member.guild.channels.get('449015012347084802').send('**' + member.user.username + '**, has left Kyoto Café .');
+});
+
 bot.on("ready", function() {
     console.log("Ready");
 });
