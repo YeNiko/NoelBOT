@@ -15,6 +15,24 @@ bot.on("ready", function() {
     console.log("Ready");
 });
 
+bot.on('message', msg => {
+  if (msg.content === 'naisu') {
+    msg.reply('NAISU!');
+  }
+    
+  if (msg.content === 'RIP') {
+    msg.reply('feelsbadman');
+  }
+    
+  if (msg.content === 'Hi') {
+    msg.reply('Heyo!');
+  }
+    
+  if (msg.content === 'Hello') {
+    msg.reply('Heyo!');
+  }
+});
+
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
