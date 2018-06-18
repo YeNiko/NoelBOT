@@ -16,7 +16,7 @@ bot.on("ready", function() {
 });
 
 bot.on('message', msg => {
-  if (msg.content === 'naisu') {
+  if (msg.content).toLowerCase === 'naisu') {
     msg.channel.send('NAISU!');
   }
     
