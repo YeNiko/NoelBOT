@@ -97,6 +97,12 @@ bot.on("message", async message => {
     if(command === `${prefix}ping`) {
         message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
     }
+    
+    if(command === `${prefix}echo` {
+        const sayMessage = args.join(" ");
+        message.delete().catch(O_o=>{}); 
+        message.channel.send(sayMessage);
+}
 });
 
 bot.on("message", async message => {
