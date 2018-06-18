@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const prefix = "miku.";
+const prefix = "miku.", "Miku.";
 
 var bot = new Discord.Client();
 
