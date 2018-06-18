@@ -7,12 +7,6 @@ bot.on("ready", function() {
     console.log("Ready");
 });
 
-bot.on("guildMemberAdd", function(member) {
-    member.guilds.channels.find("name", "chat").sendMessage("Welcome " + (member.toString() + " to Kyoto Café!");
-    
-    member.addRole(member.guild.roles.find("name", "☕Regulars (Web Friends)"));
-});
-
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
