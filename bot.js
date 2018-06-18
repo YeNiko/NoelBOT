@@ -24,11 +24,7 @@ bot.on('message', msg => {
     msg.channel.send('feelsbadman');
   }
     
-  if (msg.content === 'Hi') {
-    msg.channel.send('Heyo!');
-  }
-    
-  if (msg.content === 'Hello') {
+  if (msg.content === 'Hi', 'Hello', 'hi', 'hello') {
     msg.channel.send('Heyo!');
   }
 });
