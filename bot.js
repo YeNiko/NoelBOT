@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const prefix = "!";
+const prefix = "miku.";
 
 var bot = new Discord.Client();
 
@@ -26,6 +26,7 @@ bot.on("message", async message => {
         .addField("8ball", "Answers all questions.") 
         .addField("Avatar", "Displays the user profile picture.") 
         .addField("Userinfo", "Shows information about your account.") 
+        .addField("Owl", "Link to Overwatch League's Twitch.")
         .addField("Ban", "Bans the user provideded.")
         .addField("Kick", "Kicks the user provided.")
         message.channel.sendEmbed(embedhelp);
@@ -75,7 +76,7 @@ bot.on("message", async message => {
     
     if(command === `${prefix}8ball`) {
         var answers = [
-            "**yes**", "**no**"
+            "**Yes**", "**No**", "**Maybe**", "**Most Likely**", "**Can't answer right now, ask again**", "**Least likely**"
         ];
         var answers = answers[Math.floor(Math.random() * answers.length)];
         message.channel.send(answers.toString());
@@ -115,7 +116,7 @@ bot.on("message", async message => {
         member.ban({
             reason: `Banned by ${message.author.tag}`
         });
-        message.reply("The user has been banned from this server. Keep this server awesome!");       
+        message.reply("The user has been banned from this server.");       
     }
 
     if(command === `${prefix}kick`) {
@@ -125,10 +126,10 @@ bot.on("message", async message => {
         member.kick({
             reason: `Kicked by ${message.author.tag}`
         });
-        message.reply("The user has been kicked from this server. Keep this server awesome!");      
+        message.reply("The user has been kicked from this server.");      
     }
 });
 
-bot.on("ready", () => bot.user.setGame("in the Abyss"));
+bot.on("ready", () => bot.user.setGame("in the Café."));
 
-bot.login("NDM3ODMxMjMxMzc2NDU3NzI4.Db794w.LDeKY7zaxTZXpDvI8q-T8mt012o");
+bot.login("NDU4MjA4MDUzMjM4NjkzODg4.DgkTBw.McHcLdfEFXz1TemjodBCbyNjbGs");
