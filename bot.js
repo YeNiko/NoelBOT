@@ -81,6 +81,12 @@ bot.on("message", async message => {
         message.channel.send(answers.toString());
     }
     
+    if(command === `${prefix}slap`) {
+        const member = message.mentions.members.first();
+        if (!member) return message.reply('Mention who you would like to slap.');
+            message.channel.send("**OOF! You got just got slapped!**http://i.imgur.com/32TM2xW.gif")   
+    }
+    
     if(command === `${prefix}8ball`) {
         var answers = [
             "**Yes**", "**No**", "**Maybe**", "**Most Likely**", "**Can't answer right now, ask again**", "**Least likely**"
