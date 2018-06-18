@@ -102,7 +102,7 @@ bot.on("message", async message => {
         const sayMessage = args.join(" ");
         message.delete().catch(O_o=>{}); 
         message.channel.send(sayMessage);
-}
+    }
 });
 
 bot.on("message", async message => {
