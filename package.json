@@ -1,8 +1,8 @@
 {
-  "name": "noelbot",
+  "name": "mikubot",
   "version": "1.0.0",
-  "description": "Team Abyss's server maid.",
-  "main": "index.js",
+  "description": "Kyoto Café's waitress.",
+  "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
