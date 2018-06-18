@@ -45,8 +45,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    let messageArray = message.content.split(" ");
-    let command = messageArray[0];
+    let command = message.content.split(" ")[0].slice(prefix.length).toLowerCase();
     let args = messageArray.slice[1];
 
     if(!command.startsWith(prefix)) return;
