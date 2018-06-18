@@ -17,19 +17,19 @@ bot.on("ready", function() {
 
 bot.on('message', msg => {
   if (msg.content === 'naisu') {
-    msg.reply('NAISU!');
+    msg.channel.send('NAISU!');
   }
     
   if (msg.content === 'RIP') {
-    msg.reply('feelsbadman');
+    msg.channel.send('feelsbadman');
   }
     
   if (msg.content === 'Hi') {
-    msg.reply('Heyo!');
+    msg.channel.send('Heyo!');
   }
     
   if (msg.content === 'Hello') {
-    msg.reply('Heyo!');
+    msg.channel.send('Heyo!');
   }
 });
 
