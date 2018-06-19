@@ -32,11 +32,13 @@ bot.on('message', msg => {
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
-
+    
     let messageArray = message.content.split(" ");
     let command = messageArray[0];
     let args = messageArray.slice[1];
 
+    message.content.toLowerCase;
+    
     if(!command.startsWith(prefix)) return;
     
     if(command === `${prefix}help`) {        
@@ -54,17 +56,6 @@ bot.on("message", async message => {
         .addField("Kick", "Kicks the user provided.")
         message.channel.sendEmbed(embedhelp);
     }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-    
-    let messageArray = message.content.split(" ");
-    let command = messageArray[0];
-    let args = messageArray.slice[1];
-
-    if(!command.startsWith(prefix)) return;
     
     if(command === `${prefix}avatar`) {        
         const target = message.mentions.users.first() || message.author;
