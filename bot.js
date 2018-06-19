@@ -79,6 +79,14 @@ bot.on("message", async message => {
         message.channel.send("You rolled a " + roll);
     }
 
+    if(command === `${prefix}echo`) {
+		message.delete()
+        const embed = new Discord.RichEmbed()
+		.setColor(0x954D23)
+		.setDescription(message.author.username + " says: " + args.join(" "));
+		message.channel.send({embed})
+    }
+    
     if(command === `${prefix}coinflip`) {
         var answers = [
             "**Heads**", "**Tails**"
