@@ -78,13 +78,6 @@ bot.on("message", async message => {
         var roll = Math.floor(Math.random() * 6) + 1;
         message.channel.send("You rolled a " + roll);
     }
-
-    if(command === `${prefix}echo`) {
-        const embed = new Discord.RichEmbed()
-		.setColor(0x954D23)
-		.setDescription(message.author.username + " says: " + args.join(" "));
-		message.channel.send(embed)
-    }
     
     if(command === `${prefix}coinflip`) {
         var answers = [
