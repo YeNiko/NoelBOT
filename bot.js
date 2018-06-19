@@ -49,6 +49,7 @@ bot.on("message", async message => {
         .addField("Avatar", "Displays the user profile picture.") 
         .addField("Userinfo", "Shows information about your account.") 
         .addField("Owl", "Link to Overwatch League's Twitch.")
+        .addField("Slap", "Slap a person in the face!")
         .addField("Ban", "Bans the user provideded.")
         .addField("Kick", "Kicks the user provided.")
         message.channel.sendEmbed(embedhelp);
