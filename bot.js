@@ -98,7 +98,7 @@ bot.on("message", async message => {
     if(command === `${prefix}slap`) {
         const member = message.mentions.members.first();
         if (!member) return message.reply('Mention who you would like to slap please.');
-            message.channel.send("**OOF! You got just got slapped!** http://i.imgur.com/32TM2xW.gif")   
+            message.channel.send("**OOF! You got just got slapped!** https://giphy.com/gifs/slap-69ncMgsn111F1OLYjd")   
     }
     
     if(command === `${prefix}8ball`) {
