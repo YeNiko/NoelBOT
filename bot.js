@@ -74,12 +74,6 @@ bot.on("message", async message => {
         message.channel.send("https://www.twitch.tv/overwatchleague");
     }
     
-    if(command === `${prefix}say`) {
-        const sayMessage = args.join(" ");
-        message.delete().catch();
-        message.channel.send(sayMessage);
-    }
-    
     if(command === `${prefix}roll`) {
         var roll = Math.floor(Math.random() * 6) + 1;
         message.channel.send("You rolled a " + roll);
